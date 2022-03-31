@@ -15,6 +15,8 @@ let options = {
     uid: 123456
 };
 
+
+
 async function startBasicCall() {
     // Create an AgoraRTCClient object.
     rtc.client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
@@ -41,11 +43,14 @@ async function startBasicCall() {
 
     });
 
-    window.onload = function () {
-
+    window.onload = async function () {
         document.getElementById("join").onclick = async function () {
             // Join an RTC channel.
-            await rtc.client.join(options.appId, options.channel, options.token, options.uid);
+            const appId = document.getElementById("appId").value;
+            const channel = document.getElementById("channel").value;
+            const token = document.getElementById("token").value;
+            const uid = document.getElementById("uid").value;
+            await rtc.client.join(appId, channel, token, uid);
             // Create a local audio track from the audio sampled by a microphone.
             rtc.localAudioTrack = await AgoraRTC.createMicrophoneAudioTrack();
             // Publish the local audio tracks to the RTC channel.
