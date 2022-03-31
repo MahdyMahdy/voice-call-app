@@ -33,11 +33,11 @@ async function startBasicCall() {
 
     window.onload = async function () {
         document.getElementById("join").onclick = async function () {
-            // Join an RTC channel.
             const appId = document.getElementById("appId").value;
             const channel = document.getElementById("channel").value;
             const token = document.getElementById("token").value;
             const uid = document.getElementById("uid").value;
+            // Join an RTC channel.
             await rtc.client.join(appId, channel, token, uid);
             // Create a local audio track from the audio sampled by a microphone.
             rtc.localAudioTrack = await AgoraRTC.createMicrophoneAudioTrack();
