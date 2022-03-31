@@ -13,10 +13,12 @@
     "bash": "^0.0.1",
     "curl": "^0.1.4",
     "nvm": "^0.0.4",
-    "webpack": "5.28.0",
-    "webpack-cli": "4.5.0",
+    "webpack": "^5.28.0",
     "webpack-dev-server": "^3.11.3"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  }
 }

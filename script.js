@@ -34,7 +34,7 @@ async function startBasicCall() {
         }
 
         // Listen for the "user-unpublished" event
-        rtc.client.on("user-unpublished", user => {
+        rtc.client.on("user-unpublished", async (user) => {
             // Unsubscribe from the tracks of the remote user.
             await rtc.client.unsubscribe(user);
         });
