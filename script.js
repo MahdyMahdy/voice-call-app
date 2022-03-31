@@ -5,18 +5,6 @@ let rtc = {
     client: null
 };
 
-let options = {
-    appId: "87543219c0cd4c869433368fbac3bcb1",
-    // Set the channel name.
-    channel: "test",
-    // Pass your temp token here.
-    token: "00687543219c0cd4c869433368fbac3bcb1IADROWd0sH6EZ6e0HFlp3BamhlMufzZDP0SZ7K+xMsNTlwx+f9gAAAAAEAAg4mLW4shGYgEAAQDiyEZi",
-    // Set the user ID.
-    uid: 123456
-};
-
-
-
 async function startBasicCall() {
     // Create an AgoraRTCClient object.
     rtc.client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
